@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios da Cyber Code </title>
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: radial-gradient(circle, black, rgb(5, 155, 155));
+    text-align: center;
+}
+h1{
+    margin: 20px;
+    padding: 30px;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+p{
+    text-align: center;
+    margin-bottom: 12px;
+    color: rgb(68, 212, 104);
+    padding: 8px;
+}
+strong{
+    color: rgb(14, 26, 26);
+}
+header{
+    background: rgb(0, 0, 0);
+    border-radius: 10px 5px 12px;
+    width: 450px;
+    margin: auto;
+    margin-bottom: 14px;
+    height: 100%;
+    padding-bottom: 24px;
+    text-align: center;
+}
+#pergunta{
+    background: rgb(10, 12, 12);
+    padding: 50px;
+    color: white;
+    margin: 18px;
+    border-radius: 20px; 
+}
+.dados{
+    text-align: left;
+    margin-left: 10px;
+    background-image: linear-gradient( to left, rgba(10, 183, 235, 0.945));
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: solid 1px;
+}
+#radioa, #radiob, #radioc{
+    margin: 8px;
+}
+#radioa, #radiob, #radioc:hover{
+    cursor: pointer;
+}
+#estilo_buton{
+    padding: 18px;
+    border-radius: 30px;
+    color: rgb(19, 194, 224);
+    cursor: pointer;
+}
+#estilo_buton:hover{
+    background: aqua;
+    transition: 0.1s ease-in-out 2ms;
+    color: blue;
+    border: transparent;
+}
+.sair{
+    padding: 16px;
+    border-radius: 20px;
+    background: aqua;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.sair:hover{
+    background-image: radial-gradient(circle, red, black);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    border: transparent;
+}
+footer{
+    padding-top: 30%;
+    color: aqua;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <h1>Desafios de Tecnologia</h1>
+    <p>Junção de <strong>Programação</strong> e a <strong>Evoluição do Computador</strong></p>
+
+    <header>
+
+        <div id="pergunta"> $:: </div>
+        <br><br><br>
+
+
+        <div class="dados">
+            <input type="radio" name="name" id="radioa">
+            <label for="opcao_a" id="a"></label>
+        </div>
+
+        <br>
+        <br>
+        <div class="dados">
+            <input type="radio" name="name" id="radiob" >
+            <label for="opcao_b" id="b"></label>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="dados">
+            <input type="radio" name="name" id="radioc">
+            <label for="opcao_c" id="c"></label>
+        </div>
+
+        <br>
+        <br>
+
+
+
+        <br><br>
+        <button type="button" id="estilo_buton" class="logica" onclick="logico()">Selecionado</button>
+    </header>
+                
+    <button class="sair" onclick="sair()">Sair do Desafio</button>
+    
+    <script>
+        function sair(){
+            alert("Obrigado por visitar os nossos desafios, volte sempre!! ")
+            location.href = "site.html"
+        }
+    </script>
+
+    <footer>Feliciano Panda &copysr;</footer>
+    <script>
+    var perguta = document.querySelector("#pergunta")
+var opcao_a = document.querySelector("#a")
+var opcao_b = document.querySelector("#b")
+var opcao_c = document.querySelector("#c")
+
+
+perguta.innerHTML += " O quê é HTTP e o quê significa?"
+
+opcao_a.innerHTML = " É Linguagem de programação e significa Hypir Text Tranferm Pacote"
+
+opcao_b.innerHTML = " É Aplicação e significa Hypir Trans Tranfer Pacote"
+
+opcao_c.innerHTML = " É Protocolo e significa Hyper Text Tranfer Protocol"
+
+/*var logico = document.querySelector(".logica")
+logico.addEventListener('click', logic())*/
+
+var esc = document.getElementsByName("name")
+
+function logico(){
+
+    if(esc[2].checked){
+        alert("Certa a Resposta")
+        location.href = 'desafio_6.html'
+    }
+    else if(esc[1].checked || esc[0].checked){
+        alert("Errado Tente novamente")
+        location.href = 'desafio_1.html'
+    }else{
+        alert("Nenhuma linha foi selecionada")
+    }
+
+}</script>
+</body>
+</html>

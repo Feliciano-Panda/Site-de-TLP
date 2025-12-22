@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width
+    , initial-scale=1.0">
+    <title>Criar Conta na Cyber Code</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    text-align: center;
+    padding-top: 90px;
+}
+h1{
+    margin-bottom: 20px;
+    padding: 10px;
+    color: rgb(227, 231, 231);
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input{
+    padding: 10px;
+    margin: 15px;
+    width: 250px;
+    border: none;
+}
+#email, #senha{
+    border: none;
+    text-align: center;
+    font-size: 18px;
+}
+.bto{
+    width: 150px; 
+    margin: 20px;
+    padding: auto;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 8px;  
+    cursor: pointer;
+}
+.bto:hover{
+    background: rgb(6, 179, 202);
+    font-family: serif;
+}
+p{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 183, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+footer{
+    padding-top: 90px;
+    color: aquamarine;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+    </style>
+</head>
+<body>
+
+    <header id="log">
+        <h1>Criar Conta</h1>
+
+        <main>
+            <input type="text" placeholder="Digite o seu email / número" name="email" id="email">
+
+            <input type="password" name="senha" id="senha" placeholder="A sua senha" maxlength="6">
+        </main>
+        
+        <div id="iniciar">
+
+            <p id="p1"></p>
+
+            <input type="button" class="bto" id="bto" onclick="login()" value="Iniciar Sessão">
+
+        </div>
+
+        <p> Já tenho conta: <a href="index.html" target="_blank">Iniciar Sessão</a>
+        </p> 
+
+    </header>
+    <footer>Feliciano Panda &copysr;</footer>
+
+    <script>
+        function login(){
+    var email = document.querySelector("#email").value
+    var senha = document.getElementById("senha").value
+    var al = document.querySelector("#p1")
+
+
+    if( senha === "" && email === "" ){
+        al.innerHTML = "Campus vazios"  
+        al.style.color = "red"
+        
+    }else if(senha === "admin" && email === "925822981" ){
+        
+        location.href = "site.html"
+
+    }else{
+        al.innerHTML = "Crie uma senha e email seguro"  
+        al.style.color = "red"
+    }
+}
+    </script>
+</body>
+</html>
